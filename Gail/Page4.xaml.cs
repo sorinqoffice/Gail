@@ -15,6 +15,9 @@ namespace Gail
 {
     public partial class Page4 : PhoneApplicationPage
     {
+
+        public static string pacientBiopsies = "";
+        public static string pacientRelatives = "";
         public static string varHyperplacia = "Hyperplacia";
         public static string varBiopsy = "Biopsy";
         public Page4()
@@ -30,6 +33,7 @@ namespace Gail
             {
                 textBox1.IsEnabled = false;
                 slider1.IsEnabled = false;
+                pacientBiopsies = "NA";
             }
 
             else 
@@ -73,6 +77,11 @@ namespace Gail
         private void textBlock3_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.Relative));
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Result.xaml", UriKind.Relative));
         }
     }
 }

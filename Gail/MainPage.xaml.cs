@@ -13,8 +13,15 @@ using Microsoft.Phone.Controls;
 
 namespace Gail
 {
+
+    
     public partial class MainPage : PhoneApplicationPage
     {
+
+        public static string pacientName = "";
+        public static string pacientSurname = "";
+        public static string pacientAge = "";
+        public static string pacientEmail = "";
         // Constructor
         public MainPage()
         {
@@ -89,8 +96,11 @@ namespace Gail
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            string pacientName = textBox1.Text;
-            string pacientSurname = textBox2.Text;
+            pacientName = textBox1.Text;
+            pacientSurname = textBox2.Text;
+            pacientAge = textBox3.Text;
+            pacientEmail = textBox4.Text;
+
             NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
 

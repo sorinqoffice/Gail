@@ -39,7 +39,7 @@
             <Slider Height="84" HorizontalAlignment="Left" Margin="2,323,0,0" Name="slider2" VerticalAlignment="Top" Width="454" ValueChanged="slider2_ValueChanged" />
             <TextBlock Height="Auto" HorizontalAlignment="Left" FontFamily="Segoe WP" FontSize="32" Margin="12,400,0,0" Name="textBlock3" Tap="textBlock3_Tap" VerticalAlignment="Top" Width="454" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,462,0,0" Name="textBlock4" Text="hyperplacia" VerticalAlignment="Top" />
-            <Button Content="Evaluate risk" Height="72" Margin="0,550,0,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="456" />
+            <Button Content="Evaluate risk" Height="72" Margin="0,550,0,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="456" Click="button1_Click" />
         </Grid>
     </Grid>
 

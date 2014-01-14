@@ -15,6 +15,11 @@ namespace Gail
 {
     public partial class Page3 : PhoneApplicationPage
     {
+
+        public static string pacientRace = "";
+        public static string pacientProjectionAge = "";
+        public static string pacientMenarch = "";
+        public static string pacientChildbirth = "";
         public static string varRace = "Choose race";
         public Page3()
         {
@@ -79,13 +84,18 @@ namespace Gail
 
         private void checkBox1_Unchecked(object sender, RoutedEventArgs e)
         {
+            pacientChildbirth = "NA";
             textBox3.IsEnabled = false;
             slider3.IsEnabled = false;      
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
+            pacientRace = textBlock1.Text;
+            pacientProjectionAge = textBox1.Text;
+            pacientMenarch = textBox2.Text;
+            pacientChildbirth = textBox3.Text;
+            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));            
         }
 
         

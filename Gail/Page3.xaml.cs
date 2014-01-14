@@ -28,20 +28,7 @@ namespace Gail
         }
 
 
-        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-        }
-
-        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
-        }
-
-        private void ApplicationBarIconButton_Click_2(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
-        }
+        
 
         
       
@@ -94,6 +81,11 @@ namespace Gail
         {
             textBox3.IsEnabled = false;
             slider3.IsEnabled = false;      
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
         }
 
         

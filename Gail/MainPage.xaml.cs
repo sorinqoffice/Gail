@@ -18,14 +18,14 @@ namespace Gail
         // Constructor
         public MainPage()
         {
+            
             InitializeComponent();
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
         }
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            
-            
+            NavigationService.RemoveBackEntry();
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)

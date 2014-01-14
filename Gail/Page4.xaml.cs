@@ -41,20 +41,7 @@ namespace Gail
             textBlock3.Text = varHyperplacia;
         }
 
-        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
-        }
-
-        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
-        }
-
-        private void ApplicationBarIconButton_Click_2(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
-        }
+       
 
         private void textBlock1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {

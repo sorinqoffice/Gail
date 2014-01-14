@@ -10,7 +10,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -37,18 +37,18 @@
         </ListBox>
     </Grid>
 
-    <!--Sample code showing usage of ApplicationBar-->
+    <!--Sample code showing usage of ApplicationBar -->
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+        <!-- <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.rest.png" Text="Bio" Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.2.rest.png" Text="Bio 2" Click="ApplicationBarIconButton_Click_1"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.3.rest.png" Text="Bio 3" Click="ApplicationBarIconButton_Click_2"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.4.rest.png" Text="Bio 4" Click="ApplicationBarIconButton_Click_3"/>
-            <!-- <shell:ApplicationBar.MenuItems>
+             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>-->
-        </shell:ApplicationBar>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>-->
     </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

@@ -19,6 +19,13 @@ namespace Gail
         public MainPage()
         {
             InitializeComponent();
+            this.Loaded += new RoutedEventHandler(MainPage_Loaded);
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+            
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
@@ -28,25 +35,21 @@ namespace Gail
 
         private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
 
         private void ApplicationBarIconButton_Click_2(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page2.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
         }
 
         private void ApplicationBarIconButton_Click_3(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Page5.xaml", UriKind.Relative));
         }
 
 
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
+        
         
 
         private void ToggleSwitched(object sender, RoutedEventArgs e)
@@ -75,26 +78,71 @@ namespace Gail
         private void textBox1_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             
+
         }
+
+        
 
         private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+            
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.Relative));
+            string pacientName = textBox1.Text;
+            string pacientSurname = textBox2.Text;
+            NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
 
         private void textBox4_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+            
         }
 
         private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void textBox1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            
+        }
+
+        private void textBox2_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            textBox2.Text = string.Empty;
+            
+
+        }
+
+        private void textBox4_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            textBox4.Text = string.Empty;
+            
+        }
+
+        private void textBox1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox1.Text == "")
+                textBox1.Text = "name";
+        }
+
+        private void textBox2_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox2.Text == "")
+                textBox2.Text = "surname";
+        }
+
+        private void textBox4_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox4.Text == "")
+                textBox4.Text = "email";
         }
 
         

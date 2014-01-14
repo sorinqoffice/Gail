@@ -54,6 +54,51 @@ namespace Gail
             NavigationService.Navigate(new Uri("/Page2.xaml", UriKind.Relative));
         }
 
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int x = Convert.ToInt32(slider1.Value);
+            textBox1.Text = x.ToString();
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int y = Convert.ToInt32(slider2.Value);
+            textBox2.Text = y.ToString();
+        }
+
+        private void textBox3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void slider3_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int z = Convert.ToInt32(slider3.Value);
+            textBox3.Text = z.ToString();
+        }
+
+        private void checkBox1_Checked(object sender, RoutedEventArgs e)
+        {
+            textBox3.IsEnabled = true;
+            slider3.IsEnabled = true;           
+        }
+
+        private void checkBox1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textBox3.IsEnabled = false;
+            slider3.IsEnabled = false;      
+        }
+
         
 
     }

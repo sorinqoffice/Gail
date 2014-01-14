@@ -22,13 +22,19 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="bio 3" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Page2" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <CheckBox Content="CheckBox" Height="72" HorizontalAlignment="Left" Margin="194,99,0,0" Name="checkBox1" VerticalAlignment="Top" Checked="checkBox1_Checked" />
-        </Grid>
+        <ListBox x:Name="ContentPanel" Background="Transparent" Grid.Row="1" Margin="12,0,12,0" Tap="ContentPanel_Tap">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Height="Auto" FontFamily="Segoe WP" FontSize="32" HorizontalAlignment="Center" Margin="6,6,0,0" Name="textBlock1" VerticalAlignment="Top" Width="450" Text="{Binding Number}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 
     <!--Sample code showing usage of ApplicationBar-->

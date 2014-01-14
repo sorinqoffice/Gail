@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.Collections.ObjectModel;
 
+
 namespace Gail
 {
     public partial class Page2 : PhoneApplicationPage
@@ -27,24 +28,33 @@ namespace Gail
         {
             if (ListNumber.Count == 0)
             {
-                string[] races = new string[9] {"White", "Black","Hispanic", "Chinese", "Japanese", "Philipino", "Hawaiian", "Oceanic", "Other/Asian - American"}
+                string[] races = new string[9] { "White", "Black", "Hispanic", "Chinese", "Japanese", "Philipino", "Hawaiian", "Oceanic", "Other/Asian - American" };
 
                 foreach (string raceType in races)
                 {
-                    ListNumber.Add(new ItemModel {Race = raceType});
+                    ListNumber.Add(new ItemModel { Number = raceType });
                 }
             }
+
+            
+            ContentPanel.ItemsSource = Page2.ListNumber;
         }
 
         public static ObservableCollection<ItemModel> ListNumber {get; private set;}
 
         private void ContentPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-        
-        }
-        {
+            ListBox selectedItem = (ListBox)sender;
+            ItemModel race = (ItemModel)selectedItem.SelectedItem;
 
+            if (race != null)
+            {
+                Page3.varRace = race.Number.ToString();
+                NavigationService.GoBack();
+                
+            }
         }
+       
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
@@ -66,6 +76,16 @@ namespace Gail
             NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
         private void checkBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }

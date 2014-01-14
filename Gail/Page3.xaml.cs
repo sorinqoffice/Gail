@@ -15,9 +15,16 @@ namespace Gail
 {
     public partial class Page3 : PhoneApplicationPage
     {
+        public static string varRace = "Choose race";
         public Page3()
         {
             InitializeComponent();
+            this.Loaded +=new RoutedEventHandler(Page3_Loaded);
+        }
+
+        private void Page3_Loaded ( object sender, RoutedEventArgs e )
+        {
+           textBlock1.Text = varRace;
         }
 
 
@@ -40,9 +47,14 @@ namespace Gail
         {
             NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
+      
 
+        private void textBlock1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page2.xaml", UriKind.Relative));
         }
+
+        
+
     }
 }

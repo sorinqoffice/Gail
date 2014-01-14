@@ -44,5 +44,10 @@ namespace Gail.Images
         {
             NavigationService.Navigate(new Uri("/Page3.xaml", UriKind.Relative));
         }
+
+        private void textBox1_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            
+        }
     }
 }

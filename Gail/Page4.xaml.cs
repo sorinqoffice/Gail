@@ -15,7 +15,7 @@ namespace Gail
 {
     public partial class Page4 : PhoneApplicationPage
     {
-
+        public static string varHyperplacia = "Hyperplacia";
         public static string varBiopsy = "Biopsy";
         public Page4()
         {
@@ -37,6 +37,8 @@ namespace Gail
                 textBox1.IsEnabled = true;
                 slider1.IsEnabled = true;
             }
+
+            textBlock3.Text = varHyperplacia;
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
@@ -68,6 +70,22 @@ namespace Gail
         {
             int x = Convert.ToInt32(slider1.Value);
             textBox1.Text = x.ToString();
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int y = Convert.ToInt32(slider2.Value);
+            textBox2.Text = y.ToString();
+        }
+
+        private void textBlock3_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.Relative));
         }
     }
 }

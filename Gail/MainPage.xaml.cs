@@ -43,10 +43,7 @@ namespace Gail
             NavigationService.Navigate(new Uri("/Page4.xaml", UriKind.Relative));
         }
 
-        private void ApplicationBarIconButton_Click_3(object sender, EventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Page5.xaml", UriKind.Relative));
-        }
+        
 
 
         

@@ -45,7 +45,7 @@
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.rest.png" Text="Bio" Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.2.rest.png" Text="Bio 2" Click="ApplicationBarIconButton_Click_1"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.3.rest.png" Text="Bio 3" Click="ApplicationBarIconButton_Click_2"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.tabs.4.rest.png" Text="Bio 4" Click="ApplicationBarIconButton_Click_3"/>
+            
             <!-- <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
